@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hong Kong Tram Party 2026</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+HK:wght@400;700&family=Space+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="film-grain"></div>
+    <div class="bokeh-layer"></div>
+
+    <div id="container">
+        <!-- Page 1: Tram Ticket -->
+        <section id="page-1" class="page active">
+            <div class="ticket-container">
+                <img src="Copilot_20260719_184520.png" alt="Vintage Tram Ticket" class="vintage-ticket-img">
+                <button id="btn-accept" class="neon-btn red-neon">ACCEPT INVITATION</button>
+                <div id="stamp" class="stamp hidden">CONFIRMED</div>
+            </div>
+        </section>
+
+        <!-- Page 2: Location Briefing -->
+        <section id="page-2" class="page hidden">
+            <h2>THE RENDEZVOUS</h2>
+            <div class="location-details">
+                <p class="highlight"><strong>Whitty Street Tram Depot</strong></p>
+                <p>Entrance at Hill Road</p>
+                
+                <div class="transport-box">
+                    <h3>MTR</h3>
+                    <p>Get off at HKU Station, Exit B2. Walk down Hill Road and turn left on Des Voeux Road West. Walk under Connaught Road West Bridge.</p>
+                </div>
+                <div class="transport-box">
+                    <h3>TRAM</h3>
+                    <p>Alight at tram stop Hill Road (07E-Eastbound; 92W-Westbound).</p>
+                </div>
+                <div class="transport-box">
+                    <h3>TAXI</h3>
+                    <p>Ask the driver to drive along Connaught Road West and turn right to Hill Road. Alight at Fung Mat Road.</p>
+                </div>
+            </div>
+            <button class="neon-btn green-neon next-btn" data-next="page-3">PROCEED</button>
+        </section>
+
+        <!-- Page 3: Guest Info -->
+        <section id="page-3" class="page hidden">
+            <h2>GUEST DOSSIER</h2>
+            <p>For the WhatsApp connection.</p>
+            <input type="text" id="guest-name" placeholder="Your Name" required>
+            <input type="tel" id="guest-phone" placeholder="Phone Number" required>
+            <button class="neon-btn green-neon next-btn" data-next="page-4">NEXT</button>
+        </section>
+
+        <!-- Page 4: Food Preferences -->
+        <section id="page-4" class="page hidden">
+            <h2>LATE NIGHT CRAVINGS</h2>
+            <p>Select exactly two options.</p>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="food" value="Dim Sum"> Dim Sum</label>
+                <label><input type="checkbox" name="food" value="Italian"> Italian</label>
+                <label><input type="checkbox" name="food" value="Sushi"> Sushi</label>
+                <label><input type="checkbox" name="food" value="Other" id="food-other-check"> Other</label>
+            </div>
+            <input type="text" id="food-other-text" class="hidden" placeholder="Specify other...">
+            <button class="neon-btn green-neon next-btn" id="food-next-btn" data-next="page-5">NEXT</button>
+        </section>
+
+        <!-- Page 5: Drinks -->
+        <section id="page-5" class="page hidden">
+            <h2>POISON OF CHOICE</h2>
+            <div class="radio-group">
+                <label><input type="radio" name="drink" value="Maybe next time"> Maybe next time (Mocktails)</label>
+                <label><input type="radio" name="drink" value="Tipsy"> Don't mind getting a little bit tipsy</label>
+                <label><input type="radio" name="drink" value="Alcoholic"> Alcoholic</label>
+            </div>
+            <button class="neon-btn green-neon next-btn" data-next="page-6">NEXT</button>
+        </section>
+
+        <!-- Page 6: CD Player -->
+        <section id="page-6" class="page hidden">
+            <div class="cd-player">
+                <div class="vinyl">
+                    <div class="vinyl-center"></div>
+                </div>
+                <h2>TRACK REQUEST</h2>
+                <input type="text" id="song-request" placeholder="What song fits the mood?">
+            </div>
+            <button class="neon-btn red-neon" id="submit-btn">SUBMIT RSVP</button>
+        </section>
+
+        <!-- Page 7: Confirmation -->
+        <section id="page-7" class="page hidden">
+            <h2>SEE YOU IN THE NEON</h2>
+            <div class="summary-box">
+                <p><strong>Name:</strong> <span id="summary-name"></span></p>
+                <p><strong>Date:</strong> 22/8/2026 | <strong>Time:</strong> 19:30</p>
+                <p><strong>Location:</strong> Whitty Street Tram Depot</p>
+            </div>
+            <p class="fade-text">Your seat is reserved. Bring your cinematic flair.</p>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
