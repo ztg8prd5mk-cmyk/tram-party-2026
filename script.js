@@ -1,4 +1,4 @@
-const SCRIPT_URL = ‘https://script.google.com/macros/s/AKfycby3r62kYIa3sYO9pt_yIIPpeBppgwLJsxJyaebm1tKfQrzdQ1HfrV6wgxfvid4zDMnz/exec';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwETpw2bZcHQWhH8WS-E8QuZa_San64Jd7ebxAGS0mkBbY9wZtXJvsybsGznSuw81dKWw/exec';
 
 // 顯示其他選項的輸入框
 document.getElementById('other-check').addEventListener('change', (e) => {
